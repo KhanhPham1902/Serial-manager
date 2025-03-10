@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_dialog_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thiết lập kết nối"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textStyle="bold"/>
+
+    <View
+        android:layout_width="200dp"
+        android:layout_height="2dp"
+        android:background="@color/gray"
+        android:layout_gravity="center"
+        android:layout_marginVertical="10dp"/>
+
+    <EditText
+        android:id="@+id/edtHost"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/custom_frame"
+        android:hint="Nhập địa chỉ IP (HOST)"
+        android:maxLines="1"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:drawableEnd="@drawable/ip_address"
+        android:inputType="text"
+        android:paddingHorizontal="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"/>
+
+    <EditText
+        android:id="@+id/edtPort"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/custom_frame"
+        android:hint="Nhập cổng kết nối (PORT)"
+        android:maxLines="1"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:drawableEnd="@drawable/port"
+        android:inputType="numberSigned"
+        android:paddingHorizontal="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pbLoadingConnect"
+        android:visibility="gone"
+        android:indeterminateTint="@color/light_blue"
+        android:layout_gravity="center" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnConnect"
+        android:text="Kết nối"
+        android:visibility="visible"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/green"/>
+</LinearLayout>
